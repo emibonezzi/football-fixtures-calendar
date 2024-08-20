@@ -6,5 +6,6 @@ module.exports = async (message) => {
   await axios.post(url, {
     chat_id: process.env.GROUPCHAT,
     text: message,
+    parse_mode: "Markdown",
   });
 };

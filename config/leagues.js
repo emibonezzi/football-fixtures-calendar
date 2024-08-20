@@ -1,27 +1,27 @@
 module.exports = [
   {
     id: 28,
-    name: "Serie A",
+    name: "🇮🇹 Serie A",
     teams: "",
   },
   {
     id: 39,
-    name: "Premier League",
+    name: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League",
     teams: [33, 50, 40, 42],
   },
   {
     id: 140,
-    name: "La Liga",
+    name: "🇪🇸 La Liga",
     teams: [529, 541],
   },
   {
     id: 2,
-    name: "Champions League",
+    name: "✨ Champions League",
     teams: "",
   },
   {
     id: 3,
-    name: "Europa League",
+    name: "🌟 Europa League",
     teams: "",
   },
 ];
