@@ -1,4 +1,8 @@
-const dateFormat = require("dateformat");
-const today = dateFormat(new Date(), "yyyy-mm-dd");
+const getFixtures = require("./handlers/getFixtures");
 
-console.log(today);
+module.exports.handler = async function () {
+  const fixtures = await getFixtures();
+  console.log(fixtures);
+};
+
+module.exports.handler();
