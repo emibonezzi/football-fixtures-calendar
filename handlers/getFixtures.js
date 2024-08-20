@@ -8,7 +8,7 @@ require("dotenv").config();
 module.exports = async () => {
   try {
     // list of requests to execute
-    const requests = leagues.map((league) =>
+    /* const requests = leagues.map((league) =>
       axios.get("https://api-football-v1.p.rapidapi.com/v3/fixtures", {
         headers: {
           "x-rapidapi-key": process.env.KEY,
@@ -17,14 +17,15 @@ module.exports = async () => {
           league: league.id,
           date: today,
           season: new Date().getFullYear(),
+          timezone: "America/New_York",
         },
       })
-    );
+    ); */
 
     // execute all the requests
-    const responses = await Promise.all(requests);
+    /* const responses = await Promise.all(requests); */
 
-    /* const responses = dummy; */
+    const responses = dummy;
 
     // collect all the responses data
     const data = responses.map((res, i) => ({
@@ -34,6 +35,7 @@ module.exports = async () => {
           ? res.data.response.map((game) => ({
               home: game.teams.home.name,
               away: game.teams.away.name,
+              time: dateFormat(new Date(game.fixture.date), "hh:MM TT"),
             }))
           : null,
     }));
