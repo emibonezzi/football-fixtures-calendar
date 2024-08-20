@@ -14,7 +14,7 @@ module.exports = function (fixtures) {
         }
       }
     } else {
-      str += "No games today.";
+      str += "❌ No games today ❌ \n\n------------\n\n";
     }
   }
   return str;

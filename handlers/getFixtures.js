@@ -37,7 +37,7 @@ module.exports = async () => {
               away: game.teams.away.name,
               time: dateFormat(new Date(game.fixture.date), "hh:MM TT"),
             }))
-          : null,
+          : [],
     }));
 
     console.dir(data, { depth: null });
