@@ -10,5 +10,3 @@ module.exports.handler = async function () {
   // send text
   await sendText(message);
 };
-
-module.exports.handler();
