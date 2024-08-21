@@ -35,7 +35,9 @@ module.exports = async () => {
           ? res.data.response.map((game) => ({
               home: game.teams.home.name,
               away: game.teams.away.name,
-              time: dateFormat(new Date(game.fixture.date), "hh:MM TT"),
+              time: new Intl.DateTimeFormat("en-US", {
+                timeStyle: "short",
+              }).format(new Date(game.fixture.date)),
             }))
           : [],
     }));
