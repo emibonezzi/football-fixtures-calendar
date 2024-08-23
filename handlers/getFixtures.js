@@ -26,6 +26,7 @@ module.exports = async () => {
     const responses = await Promise.all(requests);
 
     /* const responses = dummy; */
+    console.dir(responses, { depth: null });
 
     // collect all the responses data
     const data = responses.map((res, i) => ({
@@ -36,6 +37,7 @@ module.exports = async () => {
               home: game.teams.home.name,
               away: game.teams.away.name,
               time: new Intl.DateTimeFormat("en-US", {
+                timeZone: "America/New_York",
                 timeStyle: "short",
               }).format(new Date(game.fixture.date)),
             }))
