@@ -16,7 +16,7 @@ module.exports = async () => {
         params: {
           league: league.id,
           date: today,
-          season: new Date().getFullYear(),
+          season: 2024,
           timezone: "America/New_York",
         },
       })
